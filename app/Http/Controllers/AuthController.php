@@ -1,0 +1,57 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+
+class AuthController extends Controller
+{
+
+    public function showRegister()
+    {
+        return view('register');
+    }
+
+    public function register(Request $request)
+    {
+        User::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>Hash::make($request->password),
+            'role'=>'user'
+        ]);
+
+        return redirect('/login');
+    }
+
+    public function showLogin()
+    {
+        return view('login');
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email','password');
+
+        if(Auth::attempt($credentials))
+        {
+            if(Auth::user()->role == 'admin')
+            {
+                return redirect('/admin');
+            }
+
+            return redirect('/dashboard');
+        }
+
+        return back()->with('error','Invalid credentials');
+    }
+    public function adminDashboard()
+{
+    $users = User::all();
+    return view('admin', compact('users'));
+}
+
+}
