@@ -14,7 +14,9 @@
 <?php endif; ?>
 
 <form method="POST" action="/register">
-<?php echo csrf_field(); ?>
+
+  <?php echo csrf_field(); ?>
+
 
 <div class="mb-3">
 <input type="text" name="name" class="form-control" placeholder="Full Name" required>

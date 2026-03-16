@@ -15,7 +15,9 @@
 @endif
 
 <form method="POST" action="/register">
-@csrf
+
+  @csrf
+
 
 <div class="mb-3">
 <input type="text" name="name" class="form-control" placeholder="Full Name" required>

@@ -53,5 +53,13 @@ class AuthController extends Controller
     $users = User::all();
     return view('admin', compact('users'));
 }
-
+public function showLoginForm()
+    {
+        return view('admin.login');
+    }
+     public function logout()
+    {
+        Auth::guard('admin')->logout();
+        return redirect()->route('admin.login');
+    }
 }
