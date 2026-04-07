@@ -42,7 +42,7 @@
 
 @else
     <a href="/login" class="btn btn-success btn-sm">Login</a>
-    <a href="/register" class="btn btn-primary btn-sm">Register</a>
+    <a href="{{ route('register')}}" class="btn btn-primary btn-sm">Register</a>
 @endauth
 
 

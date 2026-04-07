@@ -14,6 +14,8 @@
 <?php endif; ?>
 
 <form method="POST" action="/login">
+<form method="POST" action="/admin/login">
+
 <?php echo csrf_field(); ?>
 
 <div class="mb-3">
@@ -38,4 +40,5 @@
 
 <?php $__env->stopSection(); ?>
 
+<?php echo $__env->make('frontend.layout', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 <?php echo $__env->make('layout', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\xampp\htdocs\login-system\resources\views/login.blade.php ENDPATH**/ ?>

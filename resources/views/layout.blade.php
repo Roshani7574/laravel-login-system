@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>Login System</title>
+<title>E-Commerce</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -41,7 +41,7 @@ body{
 
 <nav class="navbar navbar-dark bg-dark">
     <div class="container">
-        <span class="navbar-brand">Laravel Login System</span>
+        <span class="navbar-brand">MyShop</span>
 
         @if(auth()->check())
         <a href="/logout" class="btn btn-danger">Logout</a>
@@ -147,6 +147,6 @@ body{
     © 2026 MyStore
 </footer>
 
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
+
 </body>
 </html>

@@ -1,6 +1,5 @@
 
 @extends('layout')
-=======
 @extends('frontend.layout')
 
 @section('content')
@@ -19,7 +18,7 @@
 
 <form method="POST" action="/login">
 <form method="POST" action="/admin/login">
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
+
 @csrf
 
 <div class="mb-3">
