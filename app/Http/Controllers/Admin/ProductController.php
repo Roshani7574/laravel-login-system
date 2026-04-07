@@ -6,30 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-
-class ProductController extends Controller
-{
-public function index(Request $request)
-{
-
-$query = Product::with(['category','subcategory']);
-
-if($request->search){
-
-$query->where('name','LIKE','%'.$request->search.'%');
-
-}
-
-$products = Product::latest()->paginate(10);
-return view('admin.products.index', compact('products'));
-
-
-}
-public function create()
-{
-    $categories = \App\Models\Category::whereNull('parent_id')->get();
-=======
 use Illuminate\Support\Facades\Auth;
 class ProductController extends Controller
 {
@@ -56,23 +32,17 @@ public function index(Request $request)
 public function create()
 {
     $categories = Category::whereNull('parent_id')->get();
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
 
     return view('admin.products.create', compact('categories'));
 }
 
 
 
-<<<<<<< HEAD
-public function store(Request $request)
-{
-=======
 
 
 public function store(Request $request)
 {
 
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
     $request->validate([
         'name' => 'required',
         'category_id' => 'required',
@@ -163,8 +133,6 @@ return redirect()->route('products.index');
 
     return response()->json($subcategories);
 }
-<<<<<<< HEAD
-=======
 public function show($id)
 {
     $product = Product::find($id);
@@ -203,7 +171,6 @@ public function home()
 
 }
 
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
 
 
 }
