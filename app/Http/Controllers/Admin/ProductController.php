@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 
 class ProductController extends Controller
 {
@@ -28,14 +29,50 @@ return view('admin.products.index', compact('products'));
 public function create()
 {
     $categories = \App\Models\Category::whereNull('parent_id')->get();
+=======
+use Illuminate\Support\Facades\Auth;
+class ProductController extends Controller
+{
+    // public function __construct()
+    // {
+    //    $this->middleware('auth');
+
+    // }
+public function index(Request $request)
+{
+    $search = $request->search;
+
+    if($search){
+        $products = Product::where('name', 'LIKE', "%$search%")->get();
+    } else {
+       $products = Product::paginate(5);
+
+    }
+
+    return view('admin.products.index', compact('products'));
+
+}
+
+public function create()
+{
+    $categories = Category::whereNull('parent_id')->get();
+>>>>>>> d024ab1 (Update project: Like a E-commerce website)
 
     return view('admin.products.create', compact('categories'));
 }
 
 
 
+<<<<<<< HEAD
 public function store(Request $request)
 {
+=======
+
+
+public function store(Request $request)
+{
+
+>>>>>>> d024ab1 (Update project: Like a E-commerce website)
     $request->validate([
         'name' => 'required',
         'category_id' => 'required',
@@ -126,6 +163,47 @@ return redirect()->route('products.index');
 
     return response()->json($subcategories);
 }
+<<<<<<< HEAD
+=======
+public function show($id)
+{
+    $product = Product::find($id);
+
+    // Get old viewed products
+    $recent = session()->get('recent', []);
+
+    // Remove if already exists
+    $recent = array_diff($recent, [$id]);
+
+    // Add current product to start
+    array_unshift($recent, $id);
+
+    // Keep only last 4
+    $recent = array_slice($recent, 0, 4);
+
+    session()->put('recent', $recent);
+
+    // Fetch those products
+    $recentProducts = Product::whereIn('id', $recent)->get();
+
+    return view('frontend.product_detail', compact('product', 'recentProducts'));
+}
+
+public function placeOrder(Request $request)
+{
+    // Clear cart
+    session()->forget('cart');
+
+    return redirect('/order-success');
+}
+public function home()
+{
+    $products = Product::all(); // or paginate
+    view('frontend.home');
+
+}
+
+>>>>>>> d024ab1 (Update project: Like a E-commerce website)
 
 
 }

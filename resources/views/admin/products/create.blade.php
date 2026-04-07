@@ -2,13 +2,24 @@
 
 @section('content')
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d024ab1 (Update project: Like a E-commerce website)
 <div class="container">
 
 <h2 class="mb-4">Add Product</h2>
 
+<<<<<<< HEAD
 <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
 
 @csrf
+=======
+<form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+
+    @csrf
+
+>>>>>>> d024ab1 (Update project: Like a E-commerce website)
 
 <div class="mb-3">
 <label class="form-label">Product Name</label>
@@ -51,6 +62,17 @@
 <label class="form-label">Product Image</label>
 <input type="file" name="image" class="form-control">
 </div>
+<<<<<<< HEAD
+=======
+<div>
+    <select name="size" required>
+    <option value="">Select Size</option>
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+</select>
+</div>
+>>>>>>> d024ab1 (Update project: Like a E-commerce website)
 
 <button type="submit" class="btn btn-primary">
 Add Product

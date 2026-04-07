@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @extends('layout')
+=======
+@extends('frontend.layout')
+>>>>>>> d024ab1 (Update project: Like a E-commerce website)
 
 @section('content')
 

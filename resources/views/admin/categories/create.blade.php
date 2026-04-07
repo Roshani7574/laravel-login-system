@@ -2,6 +2,10 @@
 
 @section('content')
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d024ab1 (Update project: Like a E-commerce website)
 <div class="container">
 
 <h2>Add Category</h2>
