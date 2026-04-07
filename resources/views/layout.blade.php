@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,7 +56,6 @@ body{
 
 </div>
 
-=======
 
 <!DOCTYPE html>
 <html lang="en">

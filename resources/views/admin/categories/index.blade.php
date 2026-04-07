@@ -1,8 +1,4 @@
 @extends('admin.layout')
-<<<<<<< HEAD
-=======
-
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
 <style>
 
 .category-page{
@@ -16,11 +12,6 @@ border-radius:10px;
 
 @section('content')
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
 <div class="container category-page">
 
     <h2>Category Management</h2>

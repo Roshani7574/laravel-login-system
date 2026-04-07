@@ -5,8 +5,6 @@
 <li>
 <a href="{{ route('admin.products.index') }}">Products</a>
 </li>
-<<<<<<< HEAD
-=======
 <li class="nav-item">
     <form action="/admin/logout" method="POST">
         @csrf
@@ -16,4 +14,3 @@
         </button>
     </form>
 </li>
->>>>>>> d024ab1 (Update project: Like a E-commerce website)

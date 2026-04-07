@@ -2,7 +2,7 @@
 
 @section('content')
 
-<<<<<<< HEAD
+
 <div class="row">
 
 <div class="col-lg-4">
@@ -57,7 +57,6 @@
 </div>
 
 </div>
-=======
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -145,7 +144,6 @@
             </p>
         </div>
     </div>
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
 
 </div>
 

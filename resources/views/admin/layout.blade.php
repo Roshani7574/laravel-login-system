@@ -56,50 +56,44 @@ min-height:100vh;
 </li>
 
 <li class="nav-item">
-<<<<<<< HEAD
+
 <a href="/admin/categories" class="nav-link">
 =======
 <a href="{{ route('categories.index') }}" class="nav-link">
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
 <i class="nav-icon fas fa-list"></i>
 <p>Categories</p>
 </a>
 </li>
 
-<<<<<<< HEAD
 <li class="nav-item">
 <a href="/admin/products" class="nav-link">
 <i class="nav-icon fas fa-box"></i>
-=======
-
 <li class="nav-item">
 <a href="{{ route('products.index') }}" class="nav-link">
 <i class="nav-icon fas fa-list"></i>
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
 <p>Products</p>
 </a>
 </li>
 
 <li class="nav-item">
-<<<<<<< HEAD
+
 <a href="/admin/logout" class="nav-link text-danger">
 <i class="nav-icon fas fa-sign-out-alt"></i>
 <p>Logout</p>
 </a>
 </li>
 
-=======
-    <form action="/admin/logout" method="POST">
-        @csrf
-        <button type="submit" class="nav-link text-danger" style="border:none; background:none;">
-            <i class="nav-icon fas fa-sign-out-alt"></i>
-            <p>Logout</p>
+
+</ul>
+
+</nav>
+
         </button>
     </form>
 </li>
 
 
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
+
 </ul>
 
 </nav>
@@ -113,11 +107,8 @@ min-height:100vh;
 
 <section class="content p-3">
 
-<<<<<<< HEAD
+
 @yield('content')
-=======
-  @yield('content')
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
 
 </section>
 
