@@ -9,11 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class ProductController extends Controller
 {
-    // public function __construct()
-    // {
-    //    $this->middleware('auth');
 
-    // }
 public function index(Request $request)
 {
     $search = $request->search;
@@ -164,13 +160,6 @@ public function placeOrder(Request $request)
 
     return redirect('/order-success');
 }
-public function home()
-{
-    $products = Product::all(); // or paginate
-    view('frontend.home');
-
-}
-
 
 
 }

@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-@extends('layout')
-=======
-@extends('frontend.layout')
->>>>>>> d024ab1 (Update project: Like a E-commerce website)
 
-@section('content')
+@extends('layout')
+@extends('frontend.layout')
+
 
 <h2 class="mb-4">Admin Dashboard</h2>
 

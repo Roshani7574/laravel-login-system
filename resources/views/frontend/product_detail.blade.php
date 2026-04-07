@@ -45,42 +45,7 @@
 
     </div>
 
-    <!-- Recently Viewed -->
-    @if(isset($recentProducts) && count($recentProducts) > 1)
-
-    <h4 class="mt-5">🔥 Recently Viewed</h4>
-
-    <div class="row">
-
-        @foreach($recentProducts as $item)
-
-            @if($item->id != $product->id)
-
-            <div class="col-md-3">
-                <div class="card mt-3 shadow-sm">
-
-                    <img src="{{ asset('product_images/' . $item->image) }}"
-                         style="height:150px; object-fit:cover;">
-
-                    <div class="card-body text-center">
-                        <h6>{{ $item->name }}</h6>
-
-                        <a href="/product/{{ $item->id }}"
-                           class="btn btn-sm btn-outline-dark">
-                            View
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            @endif
-
-        @endforeach
-
-    </div>
-
-    @endif
+    
 
 </div>
 
