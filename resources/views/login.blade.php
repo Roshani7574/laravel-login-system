@@ -1,5 +1,5 @@
 
-@extends('layout')
+
 @extends('frontend.layout')
 
 @section('content')

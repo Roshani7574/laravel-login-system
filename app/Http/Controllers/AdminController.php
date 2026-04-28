@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Product;
+use App\Models\Category;
 class AdminController extends Controller
 {
-     public function dashboard()
+      public function dashboard()
     {
-        $users = User::all(); // ✅ fetch users
+        $users = User::count();
+        $products = Product::count();
+        $categories = Category::count();
 
-        return view('admin.dashboard', compact('users'));
+        return view('admin.dashboard', compact('users', 'products', 'categories'));
     }
 }
